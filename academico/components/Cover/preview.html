@@ -1,0 +1,49 @@
+<!-- @dsCard height=288 -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap">
+<style>
+  html, body { margin: 0; padding: 0; background: var(--surface-page); }
+  .cover { position: relative; width: 960px; height: 288px; overflow: hidden; background: var(--surface-page); }
+  .art { position: absolute; left: 0; top: 0; width: 960px; height: 288px; }
+  .b-accent { fill: var(--accent); }
+  .b-ink { fill: var(--ink); }
+  .b-header { fill: var(--table-header); }
+  .b-muted { fill: var(--ink-muted); }
+  .b-rule { fill: var(--table-rule); }
+  .blk { rx: var(--radius-none); }
+  .cut { stroke: var(--surface-page); stroke-width: var(--stroke-accent); }
+  .text { position: absolute; left: 48px; bottom: 40px; width: 420px; }
+  .name { margin: 0; font-family: var(--font-serif); font-weight: 700; font-size: 80px; line-height: .95; color: var(--ink); }
+  .tag { margin: 12px 0 0; font-family: var(--font-sans); font-size: 14px; line-height: 1.3; color: var(--ink-muted); }
+</style>
+</head>
+<body>
+<div class="cover">
+  <svg class="art" viewBox="0 0 960 288" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!--
+      Bloques: accent 192x192 (528,0), ink 144x192 (720,96), ink-muted 96x96 (864,0), table-header 96x96 (528,192), table-rule 96x96 (624,192); lados en múltiplos de margin-page (96).
+      Disposición: losa naranja que sangra por arriba, columna de tinta que sangra por abajo y satélites pequeños, escalonados.
+      Patrón: tres reglas finas (editorial, hojas con bordes en lugar de sombras) en el color de la página que cortan los bloques a 48, 144 y 240.
+      Pasos y radios: paso de 96 px (margin-page); cortes con stroke-accent; esquinas con radius-none (sistema cuadrado).
+    -->
+    <rect class="blk b-accent" x="528" y="0" width="192" height="192"/>
+    <rect class="blk b-ink" x="720" y="96" width="144" height="192"/>
+    <rect class="blk b-muted" x="864" y="0" width="96" height="96"/>
+    <rect class="blk b-header" x="528" y="192" width="96" height="96"/>
+    <rect class="blk b-rule" x="624" y="192" width="96" height="96"/>
+    <line class="cut" x1="480" y1="48" x2="960" y2="48"/>
+    <line class="cut" x1="480" y1="144" x2="960" y2="144"/>
+    <line class="cut" x1="480" y1="240" x2="960" y2="240"/>
+  </svg>
+  <div class="text">
+    <h1 class="name">Académico</h1>
+    <p class="tag">Avances, prácticas y entregas de clase.</p>
+  </div>
+</div>
+</body>
+</html>
